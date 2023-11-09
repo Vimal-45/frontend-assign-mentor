@@ -33,7 +33,7 @@ const AssignStudents = () => {
             if (students.length !== 0) {
                
                 try {
-                await axios.post('http://localhost:4000/api/assign/student',
+                await axios.post('https://assign-mentor-9g6m.onrender.com/api/assign/student',
                 {Mentor:mentor,studentData:students})
                 .then(data => { alert(data.data.message)});
                                     

@@ -6,7 +6,7 @@ import { AssignStudentOldData, ChangeMentorNewData, mentorsData, studentData } f
 
 export const MentorApiData = ()=>async(dispatch)=>{
         try {
-            const res = await axios.get('http://localhost:4000/api/get/mentors');
+            const res = await axios.get('https://assign-mentor-9g6m.onrender.com/api/get/mentors');
             dispatch(mentorsData(res.data))
             // console.log(res.data);
         } catch (error) {
@@ -17,7 +17,7 @@ export const MentorApiData = ()=>async(dispatch)=>{
 
 export const StudentApiData = ()=>async(dispatch)=>{
         try {
-            const res = await axios.get('http://localhost:4000/api/get/student');
+            const res = await axios.get('https://assign-mentor-9g6m.onrender.com/api/get/student');
             // console.log(res.data);
             dispatch(studentData(res.data))
             // console.log(res.data);
@@ -30,7 +30,7 @@ export const AssignStudentApiData = ()=>async(dispatch)=>{
         try {
             
 
-            const res = await axios.get('http://localhost:4000/api/previous/data');
+            const res = await axios.get('https://assign-mentor-9g6m.onrender.com/api/previous/data');
             dispatch(AssignStudentOldData(res.data))
             // console.log(res.data);
         } catch (error) {
@@ -40,7 +40,7 @@ export const AssignStudentApiData = ()=>async(dispatch)=>{
 }
 export const UpdatedMentorAPIData = ()=>async(dispatch)=>{
         try {
-            const res = await axios.get('http://localhost:4000/api/updated/data');
+            const res = await axios.get('https://assign-mentor-9g6m.onrender.com/api/updated/data');
             dispatch(ChangeMentorNewData(res.data))
             // console.log(res.data);
         } catch (error) {

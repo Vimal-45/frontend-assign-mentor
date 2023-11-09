@@ -24,7 +24,7 @@ const ChangeMentor = () => {
                 console.log(mentor, student);
 
                 try {
-                    await axios.put('http://localhost:4000/api/change/mentor',
+                    await axios.put('https://assign-mentor-9g6m.onrender.com/api/change/mentor',
                         { Mentor: mentor, Student: student })
                         .then(data => { alert(data.data.message) });
                 } catch (error) {

@@ -30,7 +30,7 @@ const Home = () => {
 
             if (addMentor.Name.length > 0) {
                 try {
-                    await axios.post('http://localhost:4000/api/create/mentors', addMentor)
+                    await axios.post('https://assign-mentor-9g6m.onrender.com/api/create/mentors', addMentor)
                     .then(data => { alert(data.data.message); });
                 } catch (error) {
                     console.log(error);
@@ -43,7 +43,7 @@ const Home = () => {
             if (addStudent.Name && addStudent.Email && addStudent.Course) {
 
                 try {
-                    await axios.post('http://localhost:4000/api/create/student', addStudent)
+                    await axios.post('https://assign-mentor-9g6m.onrender.com/create/student', addStudent)
                     .then(data => { alert(data.data.message); });
 
                 } catch (error) {
