@@ -43,7 +43,7 @@ const Home = () => {
             if (addStudent.Name && addStudent.Email && addStudent.Course) {
 
                 try {
-                    await axios.post('https://assign-mentor-9g6m.onrender.com/create/student', addStudent)
+                    await axios.post('https://assign-mentor-9g6m.onrender.com/api/create/student', addStudent)
                     .then(data => { alert(data.data.message); });
 
                 } catch (error) {
